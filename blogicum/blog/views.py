@@ -1,11 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Q
 from django.utils.timezone import now
-from django.http import Http404
 from .models import Post, Category, Comment
 from django.contrib.auth import get_user_model
-from django.views.generic import CreateView
-from django.urls import reverse_lazy
 from .forms import PostForm, CommentForm, UserForm
 from django.core.paginator import Paginator
 from django.db.models import Count
