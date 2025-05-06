@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+  Ваши подписки
+{% endblock %}
+{% block content %}
+  <h1 class="mb-5 text-center ">Ваши подписки</h1>
+  {% for post in page_obj %}
+    <article class="mb-5">
+      {% include "includes/post_card.html" %}
+    </article>
+  {% endfor %}
+  {% include "includes/paginator.html" %}
+{% endblock %}

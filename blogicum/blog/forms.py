@@ -11,7 +11,12 @@ class PostForm(forms.ModelForm):
         model = Post
         exclude = ('author',)
         widgets = {
-            'pub_date': forms.DateInput(attrs={'type': 'date'})
+            'pub_date': forms.DateTimeInput(
+                attrs={
+                    'type': 'datetime-local',
+                    'class': 'form-control'
+                }
+            )
         }
 
 

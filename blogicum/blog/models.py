@@ -95,6 +95,8 @@ class Post(BaseModel):
 
 
 class Comment(models.Model):
+    """Комментарий."""
+
     text = models.TextField('Текст комментария')
     post = models.ForeignKey(
         Post,
@@ -106,3 +108,28 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ('created_at',)
+
+
+class Follow(models.Model):
+    """Подписка."""
+
+    # кто подписан
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='follower'
+    )
+    # на кого подписан
+    following = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='following'
+    )
+
+    class Meta:
+        verbose_name = 'подписка'
+        verbose_name_plural = 'Подписки'
+        unique_together = ('user', 'following')
+
+    def __str__(self):
+        return self.user.get_username() + " - " + self.following.get_username()
