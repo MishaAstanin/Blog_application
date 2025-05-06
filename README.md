@@ -1,1 +1,1 @@
-# django_sprint4
+# Blog_application
