@@ -19,6 +19,15 @@
 
 ---
 
+## Архитектура проекта
+
+Приложение реализовано с использованием трёхслойной архитектуры:
+- Клиентский уровень (User interface): взаимодействие с пользователем.
+- Уровень приложения (Business logic): обработка данных и бизнес-логика.
+- Уровень данных (Storage): хранение и получение информации.
+
+---
+
 ## Как запустить проект
 
 1. Склонируйте репозиторий
@@ -29,22 +38,27 @@ git clone https://github.com/MishaAstanin/Blog_application.git
 
 3. Активируйте виртуальное окружение и установите зависимости:
 ```bash
-    `python -m venv venv`
-   
-    `source venv/bin/activate` на Linux/macOS
-   
-    `source venv\Scripts\activate`  на Windows
-   
-    `pip install -r requirements.txt`
+    python -m venv venv
+```
+```bash
+    source venv/bin/activate на Linux/macOS
+```
+```bash
+    source venv\Scripts\activate  на Windows
+```
+```bash
+    pip install -r requirements.txt
 ```
    
 5. Создайте и примените миграции:
-    `python manage.py migrate`
-   
+```bash
+    python manage.py migrate
+``` 
 7. Запустите сервер разработки:
+```bash
     `cd blogicum/`
     `python manage.py runserver`
-
+```
 ## Вклад в проект
 
 Мы всегда рады видеть ваши предложения и вклад в развитие Проекта. Пожалуйста, обращайтесь через систему pull request или создайте issue с описанием вашего предложения.
