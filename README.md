@@ -52,12 +52,12 @@ git clone https://github.com/MishaAstanin/Blog_application.git
    
 5. Создайте и примените миграции:
 ```bash
+    cd blogicum/
     python manage.py migrate
 ``` 
 7. Запустите сервер разработки:
 ```bash
-    `cd blogicum/`
-    `python manage.py runserver`
+    python manage.py runserver
 ```
 ## Вклад в проект
 
