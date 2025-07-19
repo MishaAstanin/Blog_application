@@ -36,7 +36,7 @@
 git clone https://github.com/MishaAstanin/Blog_application.git
 ```
 
-3. Активируйте виртуальное окружение и установите зависимости:
+2. Активируйте виртуальное окружение и установите зависимости:
 ```bash
     python -m venv venv
 ```
@@ -50,12 +50,12 @@ git clone https://github.com/MishaAstanin/Blog_application.git
     pip install -r requirements.txt
 ```
    
-5. Создайте и примените миграции:
+3. Создайте и примените миграции:
 ```bash
     cd blogicum/
     python manage.py migrate
 ``` 
-7. Запустите сервер разработки:
+4. Запустите сервер разработки:
 ```bash
     python manage.py runserver
 ```
