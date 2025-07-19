@@ -28,7 +28,7 @@ git clone https://github.com/MishaAstanin/Blog_application.git
 ```
 
 3. Активируйте виртуальное окружение и установите зависимости:
-   
+```bash
     `python -m venv venv`
    
     `source venv/bin/activate` на Linux/macOS
@@ -36,6 +36,7 @@ git clone https://github.com/MishaAstanin/Blog_application.git
     `source venv\Scripts\activate`  на Windows
    
     `pip install -r requirements.txt`
+```
    
 5. Создайте и примените миграции:
     `python manage.py migrate`
